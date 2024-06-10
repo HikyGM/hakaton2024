@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <title>{{ title }}</title>
+
+    <!-- Favicons -->
+    <link href="../static/assets/img/favicon.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- ======= Стили ======= -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../static/assets/css/style_index.css">
+    <link href="../static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ======= Загрузка ======= -->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object" id="object_one"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_three"></div>
+            <div class="object" id="object_four"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ======= Шапка ======= -->
+{% include 'header.html' %}
+
+<!-- ======= Сайдбар ======= -->
+{% include 'sidebar.html' %}
+
+<!-- ======= Контент ======= -->
+<main id="main" class="main">
+    {% block content %}{% endblock %}
+</main>
+
+<!-- ======= Скрипты ======= -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="../static/assets/vendor/echarts/echarts.min.js"></script>
+<script src="../static/assets/js/jqueryv3.6.0.js"></script>
+<script src="../static/assets/js/jquery.meanmenu.min.js"></script>
+<script src="../static/assets/js/gsap.min.js"></script>
+<script src="../static/assets/js/ScrollTrigger.min.js"></script>
+<script src="../static/assets/js/ScrollSmoother.min.js"></script>
+<script src="../static/assets/js/SplitText.min.js"></script>
+<script src="../static/assets/js/ScrollToPlugin.min.js"></script>
+<script src="../static/assets/js/swiper-bundle.min.js"></script>
+<script src="../static/assets/js/wow.min.js"></script>
+<script src="../static/assets/js/backToTop.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="../static/assets/js/tilt.jquery.js"></script>
+<script src="../static/assets/js/main_index.js"></script>
+<script src="../static/assets/js/main.js"></script>
+</body>
+</html>

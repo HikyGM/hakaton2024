@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="card info-card sales-card" style="text-align: center;">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ title_card }}<span>| Последний раз: Сегодня</span></h5>
+                            <img src="../static/sample_image/{{ primer }}" alt="" style="width: 100%;">
+                            <p style="color: #ff0000;font-size: 25px;">{{ error }}</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <form class="row" method="post" action="" novalidate>
+                                {{ form.hidden_tag() }}
+                                <div class="col-12 mb-2">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            {{ form.x.label }}
+                                        </div>
+                                        <div class="col-md-10">
+                                            {{ form.x(class="form-control") }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            {{ form.y.label }}
+                                        </div>
+                                        <div class="col-md-10">
+                                            {{ form.y(class="form-control") }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col"></div>
+                                <div class="col-md-3">
+                                    {{ form.submit(class="btn btn-primary") }}
+                                </div>
+                                <div class="col-md-3">
+
+                                    {{ form.new_submit(class="btn btn-primary") }}
+
+                                </div>
+                                <div class="col"></div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+
+                <div class="card-body pb-0">
+                    <h5 class="card-title">Справка</h5>
+                    <div class="ps-3">
+                        <span class="text-muted small pt-2 ps-1">
+                        <img src="../static/assets/img/info/{{ info }}"/>'
+                        </span>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

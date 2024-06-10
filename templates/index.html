@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/assets/img/favicon.png" rel="icon">
+    <link href="../static/assets/img/favicon.png" rel="apple-touch-icon">
+    <title>Хакатон</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="../static/assets/css/backToTop.css">
+    <link rel="stylesheet" href="../static/assets/css/animate.min.css">
+    <link rel="stylesheet" href="../static/assets/css/style_index.css">
+    <link rel="stylesheet" href="../static/assets/css/meanmenu.css">
+</head>
+<body>
+
+<!-- preloader  -->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object" id="object_one"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_three"></div>
+            <div class="object" id="object_four"></div>
+        </div>
+    </div>
+</div>
+
+<!-- mobile menu  -->
+<div class="responsive_mobile_menu">
+    <div class="container">
+        <div class="mobile_wrapper">
+            <div class="mobile_left">
+                <div class="logo">
+                    <img src="../static/assets/img/logo.png" alt="logo" style="width: 250px;">
+                </div>
+            </div>
+            <div class="mobile_right">
+                <a href="javascript:void(0)"><i class="fa-solid fa-bars text-white open-mobile-menu"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mobile_info_open ">
+    <div class="container">
+        <div class="mobile_header">
+            <div class="mobile-logo">
+                <img src="../static/assets/img/logo.png" alt="">
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-xmark  close_info"></i>
+            </div>
+        </div>
+        <div class="mobile_body">
+            <div class="mobile-menu">
+                    <a class="primary-btn" href="/dashboard">Начать </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Шапка сайта  -->
+<header class="hacaton-header">
+    <div class="container">
+        <div class="hacaton-header-wrapper">
+            <div class="hacaton-header-logo">
+                <a href="index"><img src="../static/assets/img/logo.png" alt="logo"
+                                     style="width: 250px;"></a>
+            </div>
+            <div class="hacaton-header-center">
+                <nav id="mobile-menu">
+                    <ul class="hacaton-header-menu">
+
+                        <li><a href="#direction">Направления</a></li>
+                        <li><a href="#site">О сайте</a></li>
+                        <li><a href="#team">Команда</a></li>
+                        <li><a href="#criterion">Критерии</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="hacaton-header-right">
+                <a class="primary-btn" href="/dashboard">Начать </a>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- /Шапка сайта  -->
+
+<!-- Заставка  -->
+<section class="hacaton-hero">
+    <img class="hacaton-hero-mainImg" src="../static/assets/img/hero.png" alt="">
+    <img class="hacaton-hero-shape1" src="../static/assets/img/index/hero/circles.png" alt="">
+    <img class="hacaton-hero-shape2" src="../static/assets/img/index/hero/circles-sm.png" alt="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="hacaton-hero-left">
+                    <div class="hacaton-hero-wrap wow animate__animated animate__fadeIn" data-wow-duration=".2s"
+                         data-wow-delay="0.4s">
+                        <h1 class="hacaton-hero-title hacaton-hero-title section-title-anim">
+                            <span>Обучаюсь<br>Проектирую</span><br>Программирую<br>Будущее
+                        </h1>
+                    </div>
+                    <p class="hacaton-hero-dis wow animate__animated animate__fadeIn" data-wow-duration=".5s"
+                       data-wow-delay=".5s">Всероссийский хакатон</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Заставка  -->
+
+<!-- Мобильная Заставка  -->
+<div class="hacaton-mobile">
+    <div class="container">
+        <div class="hacaton-hero-left">
+            <div class="hacaton-hero-wrap wow animate__animated animate__fadeIn" data-wow-duration=".2s"
+                 data-wow-delay="0.3s">
+                <h1 class="hacaton-hero-title-mobile hacaton-hero-title section-title-anim">
+                    <span>Обучаюсь<br>Проектирую</span><br>Программирую<br>Будущее
+                </h1>
+            </div>
+            <div class="hacaton-mobile-thumb">
+                <img class="hacaton-mobile-mainImgMobile" src="../static/assets/img/hero.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Мобильная Заставка  -->
+
+<!-- Направление -->
+<section id="direction" class="hacaton-rating">
+    <div class="container">
+        <h2 class="hacaton-rating-title section-title-anim wow animate__animated animate__fadeIn"
+            data-wow-duration=".5s" data-wow-delay="0.3s">Направление «Программирование»</h2>
+    </div>
+    <div class="container">
+        <h3 class="hacaton-brand-dis section-title-anim"
+            data-wow-duration=".5s" data-wow-delay="0.3s">Стремление к упрощению вычислений привело к тому, что многие
+            люди
+            перестали использовать свои математические навыки. Данная платформа
+            призвана вернуть интерес к математике, предоставляя пользователям
+            возможность решать рандомно генерируемые математические примеры и
+            мгновенно получать результат</h3>
+    </div>
+</section>
+<!-- /Направление -->
+
+<!-- О сайте  -->
+<section id="site" class="hacaton-service">
+    <div class="container">
+        <div class="hacaton-sectiontitle">
+            <h2 class="hacaton-stitle section-title-anim wow animate__animated animate__fad eIn"
+                data-wow-duration=".5s" data-wow-delay="0.5s">Разработаный сайт</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="hacaton-service-item">
+                    <img class="wow animate__animated animate__fadeIn" data-wow-duration=".5s" data-wow-delay="0.2s"
+                         src="../static/assets/img/index/service/icon-1.png" alt="">
+                    <span class="hacaton-service-itemtitle wow animate__animated animate__fadeIn"
+                          data-wow-duration=".5s" data-wow-delay="0.7s"><a
+                            href="about.html">Удобный</a></span>
+                    <p class="hacaton-service-itemdis wow animate__animated animate__fadeIn" data-wow-duration=".5s"
+                       data-wow-delay=".9s">Содержимое сайта адаптивно подстраивается под размеры экрана</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="hacaton-service-item wow animate__animated animate__fadeIn" data-wow-duration=".4s"
+                     data-wow-delay="1s">
+                    <img src="../static/assets/img/index/service/icon-2.png" alt="">
+                    <span class="hacaton-service-itemtitle"><a href="about.html">Масштабируемый</a></span>
+                    <p class="hacaton-service-itemdis">Сайт разработан на Flask, что позволяет масштабировать его в
+                        соответствии с требованиями</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="hacaton-service-item before-none wow animate__animated animate__fadeIn"
+                     data-wow-duration=".6s" data-wow-delay="0.7s">
+                    <img src="../static/assets/img/index/service/icon-3.png" alt="">
+                    <span class="hacaton-service-itemtitle"><a href="about.html">Безопасный</a></span>
+                    <p class="hacaton-service-itemdis">Информация о пользователях хранится в зашифрованном формате</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /О сайте  -->
+
+<!-- Команда  -->
+<section id="team" class="hacaton-ateam">
+    <div class="container">
+        <div class="hacaton-sectiontitle">
+            <h2 class="hacaton-stitle section-title-anim wow animate__animated animate__fadeInUp"
+                data-wow-duration=".5s" data-wow-delay=".8s">Наша команда</h2>
+        </div>
+        <div class="hacaton-ateam-wrapper">
+            <div class="hacaton-ateam-items">
+                <div class="hacaton-ateam-item">
+                    <img src="../static/assets/img/index/team/bogdancev.png" alt="">
+                    <p>Богданцев Андрей</p>
+                    <span>Frontend | Backend</span>
+                </div>
+                <div class="hacaton-ateam-item">
+                    <img src="../static/assets/img/index/team/tokarev.png" alt="">
+                    <p>Токарев Матвей</p>
+                    <span>Engineer</span>
+                </div>
+                <div class="hacaton-ateam-item">
+                    <img src="../static/assets/img/index/team/semkin.png" alt="">
+                    <p>Сёмкин Андрей</p>
+                    <span>Frontend</span>
+                </div>
+                <div class="hacaton-ateam-item">
+                    <img src="../static/assets/img/index/team/vasileva.png" alt="">
+                    <p>Васильева Полина</p>
+                    <span>Backend</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- brand  -->
+</section>
+<!-- /Команда  -->
+
+<!-- Критерии Оценки  -->
+<section id="criterion" class="hacaton-faq">
+    <div class="container">
+        <div class="hacaton-plan-wrapper">
+            <h4 class="hacaton-savior-title section-title-anim wow animate__animated animate__fadeIn"
+                data-wow-duration=".5s" data-wow-delay="0.5s">Критерии Оценки</h4>
+        </div>
+        <div class="hacaton-faq-wrapper">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Пользовательский интерфейс: насколько он понятен,
+                            удобен и привлекателен для пользователя?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Интерфейс интуитивно понятен. Верстка сайта адаптивна под разлиные размеры экрана.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Регистрация пользователя: насколько безопасно
+                            реализована регистрация пользователя.
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>При регистрации пользователя данные заносятся в базу данных. Пароль хранится в защищёном
+                                формате SHA256. Ведётся работа с сессией.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Реализация личного кабинета пользователя: насколько он
+                            удобен в использовании.
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Личный кабинет пользователя реализован. Позволяет редактировать информацию о
+                                пользователе, смена пароля. Реализован просмотр прогресса.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                            Качество генерации математических примеров, в том числе
+                            по заданным критериям
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Примеры генерируются по разным темам. Используют разные математические элементы (сложение, вычитаение, умножение, деление, квадрытне корни, кубические корни, факториалы, степени, уравнения и тд.)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                            Рейтинг пользователя: насколько он понятен и мотивирует
+                            двигаться дальше при решении задач.
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>За каждую решённую задачу пользователь получает баллы. Разные уровни сложности дают
+                                разное количество баллов. Чем выше уровень, тем больше баллов. А так же ведётся
+                                статистика
+                                успешности решения задач в процентах.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+                            Скорость работы системы: насколько быстро генерируются
+                            примеры и проверяются ответы.
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Задачи генерируются и проверяются моментально в режиме реального времени.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
+                            Реализация отслеживания прогресса.
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>На сайте реализована ранговая системя пользователей. Чем больше рейтинга набирает
+                                пользователь, тем выше его ранг.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseThree">
+                            Реализация выбора типа примера: насколько широк выбор,
+                            как хорошо генерируются примеры в каждой секции.
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Задачи генерируются по различным типам и уровням сложности.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingNine">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseThree">
+                            Реализация системы мотивации.
+                        </button>
+                    </h2>
+                    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>За различные достижения в решении задач пользователь получает медальки.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Критерии Оценки  -->
+
+<!-- Контакты  -->
+<section id="contact" class="hacaton-service">
+    <div class="container">
+        <div class="hacaton-sectiontitle">
+            <h2 class="hacaton-stitle section-title-anim wow animate__animated animate__fad eIn"
+                data-wow-duration=".5s" data-wow-delay="0.5s">Контакты</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="hacaton-contactp-item">
+                    <div class="hacaton-contactp-left">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="hacaton-contactp-right">
+                        <h4>Адрес</h4>
+                        <p>г.Орск пр.Ленина 81</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="hacaton-contactp-item">
+                    <div class="hacaton-contactp-left">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="hacaton-contactp-right">
+                        <h4>Почта</h4>
+                        <p><a href="mailto:hello@email.com">hikygm@ya.ru</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="hacaton-contactp-item">
+                    <div class="hacaton-contactp-left">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="hacaton-contactp-right">
+                        <h4>Номер</h4>
+                        <p><a href="callto:+854574">+7 (961) 936 89 43</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Контакты  -->
+
+<!-- Карта -->
+<div class="hacaton-map">
+    <div class="container">
+        <div class="google-map">
+            <iframe class="w-100" height="450"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5343.4174863981625!2d58.464208999042185!3d51.24492025642883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x417ffa59cb175d9b%3A0xa3b3492ea4b9ea22!2z0J7RgNGB0LrQuNC5INC90LXRhNGC0Y_QvdC-0Lkg0YLQtdGF0L3QuNC60YPQvA!5e0!3m2!1sru!2sru!4v1716961525262!5m2!1sru!2sru"></iframe>
+        </div>
+    </div>
+</div>
+<!-- /Карта -->
+
+
+<div class="offcanvas-overlay"></div>
+<div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+              style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 265.093;">
+        </path>
+    </svg>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+<script src="../static/assets/js/jqueryv3.6.0.js"></script>
+<script src="../static/assets/js/bootstrap.min.js"></script>
+<script src="../static/assets/js/jquery.meanmenu.min.js"></script>
+<script src="../static/assets/js/gsap.min.js"></script>
+<script src="../static/assets/js/ScrollTrigger.min.js"></script>
+<script src="../static/assets/js/ScrollSmoother.min.js"></script>
+<script src="../static/assets/js/SplitText.min.js"></script>
+<script src="../static/assets/js/ScrollToPlugin.min.js"></script>
+<script src="../static/assets/js/swiper-bundle.min.js"></script>
+<script src="../static/assets/js/wow.min.js"></script>
+<script src="../static/assets/js/backToTop.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="../static/assets/js/tilt.jquery.js"></script>
+<script src="../static/assets/js/main_index.js"></script>
+
+<script>
+
+    // client item
+    gsap.from(".hacaton-savior-thumbs img", {
+        duration: 2.5,
+        ease: "power4.out",
+        opacity: 0,
+        y: 50,
+        stagger: {
+            each: 0.1,
+            from: "top",
+        },
+        scrollTrigger: {
+            trigger: '.hacaton-team-activition',
+            start: 'top center',
+            toggleActions: 'restart none none none'
+        }
+    });
+
+
+    const secondarybtn = document.querySelectorAll('.secondary-btn');
+    secondarybtn.forEach((item) => {
+        item.addEventListener('mouseenter', () => {
+            gsap.to(secondarybtn, {
+                background: 'linear-gradient(30deg, #B16CEA 0%, #FF5E69 80.83%, #FFA84B 100%)',
+            })
+        })
+
+        item.addEventListener('mouseleave', () => {
+            gsap.to(secondarybtn, {
+                background: 'linear-gradient(90deg, #B16CEA 0%, #FF5E69 45.83%, #FFA84B 100%)',
+            })
+        });
+    })
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if current_user.is_authenticated %}
+        <section class="section profile">
+            <div class="row">
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+                            <img src="../static/assets/img/service/images_profiles_users/{{ current_user.source_image }}"
+                                 alt="Profile" class="rounded-circle" style="width: 200px;height: 200px;">
+                            <h2>{{ current_user.name }}</h2>
+                            <h3>{{ rank }}</h3>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+                            <h2>Награды</h2>
+                            <div class="social-links mt-2">
+                                <a href="#" class="twitter">
+                                    <img src="../static/assets/img/service/medal/top1.jpg" alt="" style="max-width: 90px;">
+                                </a>
+                                <a href="#" class="twitter">
+                                    <img src="../static/assets/img/service/medal/100task.jpg" alt="" style="max-width: 90px;">
+                                </a>
+                                <a href="#" class="twitter">
+                                    <img src="../static/assets/img/service/medal/1000point.jpg" alt="" style="max-width: 90px;">
+                                </a>
+                                <a href="#" class="twitter">
+                                    <img src="../static/assets/img/service/medal/first_task.jpg" alt="" style="max-width: 90px;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8">
+                    <div class="card">
+                        <div class="card-body pt-3">
+                            <!-- Bordered Tabs -->
+                            <ul class="nav nav-tabs nav-tabs-bordered">
+                                <li class="nav-item">
+                                    <button class="nav-link {{ my_profile_active }}" {{ my_profile }}
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#profile-overview">
+                                        Мой профиль
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">
+                                        Изменить
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">
+                                        Статистика
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link {{ edit_password_active }}" {{ edit_password }}
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#profile-change-password">
+                                        Смена пароля
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="tab-content pt-2">
+                                <div class="tab-pane fade  profile-overview {{ my_profile_show }} {{ my_profile_active }}"
+                                     id="profile-overview">
+                                    <h5 class="card-title">О себе</h5>
+                                    <p class="small fst-italic">{{ current_user.about }}</p>
+
+                                    <h5 class="card-title">Детали</h5>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label ">Полное имя</div>
+                                        <div class="col-lg-9 col-md-8">{{ current_user.name }}</div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label ">Дата регистрации</div>
+                                        <div class="col-lg-9 col-md-8">{{ current_user.created_date }}</div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Email</div>
+                                        <div class="col-lg-9 col-md-8">{{ current_user.email }}</div>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+                                    <!-- Profile Edit Form -->
+                                    <form action="/profile" method="post" enctype="multipart/form-data" novalidate>
+                                        {{ form_edit.hidden_tag() }}
+                                        <div class="row mb-3">
+                                            {{ form_edit.source_image.label(class="col-md-4 col-lg-3 col-form-label") }}
+                                            <div class="col-md-8 col-lg-9">
+                                                <img src="../static/assets/img/service/images_profiles_users/{{ current_user.source_image }}"
+                                                     alt="Profile">
+                                                <div class="pt-2">
+                                                    {{ form_edit.source_image( accept=".png,.jpeg", class="form-control") }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            {{ form_edit.username.label(class="col-md-4 col-lg-3 col-form-label") }}
+                                            <div class="col-md-8 col-lg-9">
+                                                {{ form_edit.username(class="form-control", placeholder=current_user.name) }}
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            {{ form_edit.about.label(class="col-md-4 col-lg-3 col-form-label") }}
+                                            <div class="col-md-8 col-lg-9">
+                                                {{ form_edit.about(class="form-control", placeholder=current_user.about,
+                                        style="height: 100px") }}
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            {{ form_edit.submit(type="submit", class="btn btn-primary") }}
+                                        </div>
+                                    </form><!-- End Profile Edit Form -->
+                                </div>
+                                <div class="tab-pane fade profile-overview pt-3" id="profile-settings">
+
+                                    <h5 class="card-title">Детали</h5>
+
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Всего задач</div>
+                                        <div class="col-lg-9 col-md-8">{{ level_all }}</div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Всего верных</div>
+                                        <div class="col-lg-9 col-md-8">{{ level_rate }}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Всего неверных</div>
+                                        <div class="col-lg-9 col-md-8">{{ level_wrong }}</div>
+                                    </div>
+
+
+                                </div>
+                                <div class="tab-pane fade pt-3 {{ edit_password_show }} {{ edit_password_active }}"
+                                     id="profile-change-password">
+                                    <!-- Change Password Form -->
+                                    <form action="/profile" method="post" novalidate>
+                                        {{ form_edit_password.hidden_tag() }}
+                                        <div class="text-center">
+                                            {{ error_message }}
+                                        </div>
+                                        <div class="row mb-3">
+                                            {{ form_edit_password.password_check.label(class="col-md-4 col-lg-3 col-form-label") }}
+                                            <div class="col-md-8 col-lg-9">
+                                                {{ form_edit_password.password_check(class="form-control", type="password") }}
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            {{ form_edit_password.password_new.label(class="col-md-4 col-lg-3 col-form-label") }}
+                                            <div class="col-md-8 col-lg-9">
+                                                {{ form_edit_password.password_new(class="form-control", type="password") }}
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            {{ form_edit_password.password_again.label(class="col-md-4 col-lg-3 col-form-label") }}
+                                            <div class="col-md-8 col-lg-9">
+                                                {{ form_edit_password.password_again(class="form-control", type="password") }}
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            {{ form_edit_password.submit(type="submit", class="btn btn-primary") }}
+                                        </div>
+                                    </form><!-- End Change Password Form -->
+                                </div>
+                            </div><!-- End Bordered Tabs -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+{% endblock %}

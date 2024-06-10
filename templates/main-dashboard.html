@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% block content %}
+    <section class="section dashboard">
+        <div class="row">
+
+            <!-- Left side columns -->
+            <div class="col-lg-8">
+                <div class="row">
+
+
+                    <!-- LVL 1 Card -->
+                    <div class="col-md-12">
+                        <div class="card info-card sales-card">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Описание</h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="ps-3">
+                                        <span class="text-success small pt-1 fw-bold">Примеры:</span>
+                                        <span class="text-muted small pt-2 ps-1">
+                                            Генерации примеров разбиты по разделам. Разделы разбиты по уровням сложности.
+                                            Чем выше уровень сложности, тем больше даётся очков за правильное решение.
+                                            Результаты сохраняются в базе данных.
+                                        </span>
+
+                                        <br>
+
+                                        <span class="text-success small pt-1 fw-bold">Система мотивации:</span>
+                                        <span class="text-muted small pt-2 ps-1">
+                                            Награды выдаются за решение определенного количества примеров и кол-ва набранных очков, а так же за взятие первого места в топе.
+                                        </span>
+                                        <br>
+
+                                        <span class="text-success small pt-1 fw-bold">Ранги:</span>
+                                        <br>
+                                        <span class="text-muted small pt-2 ps-1">
+                                            10 > Рекрут <br>
+                                            100 > Страж<br>
+                                            1 000 > Рыцарь<br>
+                                            10 000 > Герой<br>
+                                            100 000 > Легенда<br>
+                                            1 000 000 > Властелин<br>
+                                            10 000 000 > Божество<br>
+                                            100 000 000 > Титан<br>
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End LVL 1 Card -->
+
+                </div>
+            </div><!-- End Left side columns -->
+
+            <!-- Right side columns -->
+            <div class="col-lg-4">
+
+
+                <!-- Budget Report -->
+
+                <div class="card">
+
+                    <div class="card-body pb-0">
+                        <h5 class="card-title">Топ 10</h5>
+
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Имя</th>
+                                <th scope="col">Очки</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for item in top_user %}
+                                <tr>
+                                    <td>{{ item.name }}</td>
+                                    <td>{{ item.total_score }}</td>
+                                </tr>
+
+                            {% endfor %}
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </div><!-- End Website Traffic -->
+
+                <!-- News & Updates Traffic -->
+                <!--            <div class="card">-->
+                <!--                <div class="filter">-->
+                <!--                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>-->
+                <!--                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">-->
+                <!--                        <li class="dropdown-header text-start">-->
+                <!--                            <h6>Filter</h6>-->
+                <!--                        </li>-->
+
+                <!--                        <li><a class="dropdown-item" href="#">Today</a></li>-->
+                <!--                        <li><a class="dropdown-item" href="#">This Month</a></li>-->
+                <!--                        <li><a class="dropdown-item" href="#">This Year</a></li>-->
+                <!--                    </ul>-->
+                <!--                </div>-->
+
+                <!--                <div class="card-body pb-0">-->
+                <!--                    <h5 class="card-title">News &amp; Updates <span>| Today</span></h5>-->
+
+                <!--                    <div class="news">-->
+                <!--                        <div class="post-item clearfix">-->
+                <!--                            <img src="../static/assets/img/news-1.jpg" alt="">-->
+                <!--                            <h4><a href="#">Nihil blanditiis at in nihil autem</a></h4>-->
+                <!--                            <p>Sit recusandae non aspernatur laboriosam. Quia enim eligendi sed ut harum...</p>-->
+                <!--                        </div>-->
+
+                <!--                        <div class="post-item clearfix">-->
+                <!--                            <img src="../static/assets/img/news-2.jpg" alt="">-->
+                <!--                            <h4><a href="#">Quidem autem et impedit</a></h4>-->
+                <!--                            <p>Illo nemo neque maiores vitae officiis cum eum turos elan dries werona nande...</p>-->
+                <!--                        </div>-->
+
+                <!--                        <div class="post-item clearfix">-->
+                <!--                            <img src="../static/assets/img/news-3.jpg" alt="">-->
+                <!--                            <h4><a href="#">Id quia et et ut maxime similique occaecati ut</a></h4>-->
+                <!--                            <p>Fugiat voluptas vero eaque accusantium eos. Consequuntur sed ipsam et totam...</p>-->
+                <!--                        </div>-->
+
+                <!--                        <div class="post-item clearfix">-->
+                <!--                            <img src="../static/assets/img/news-4.jpg" alt="">-->
+                <!--                            <h4><a href="#">Laborum corporis quo dara net para</a></h4>-->
+                <!--                            <p>Qui enim quia optio. Eligendi aut asperiores enim repellendusvel rerum cuder...</p>-->
+                <!--                        </div>-->
+
+                <!--                        <div class="post-item clearfix">-->
+                <!--                            <img src="../static/assets/img/news-5.jpg" alt="">-->
+                <!--                            <h4><a href="#">Et dolores corrupti quae illo quod dolor</a></h4>-->
+                <!--                            <p>Odit ut eveniet modi reiciendis. Atque cupiditate libero beatae dignissimos-->
+                <!--                                eius...</p>-->
+                <!--                        </div>-->
+
+                <!--                    </div>&lt;!&ndash; End sidebar recent posts&ndash;&gt;-->
+
+                <!--                </div>-->
+                <!--            </div>&lt;!&ndash; End News & Updates &ndash;&gt;-->
+
+            </div><!-- End Right side columns -->
+
+        </div>
+    </section>
+{% endblock %}

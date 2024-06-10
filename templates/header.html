@@ -1,0 +1,47 @@
+<header id="header" class="header fixed-top d-flex align-items-center">
+    <!-- Логтип -->
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="/dashboard" class="logo d-flex align-items-center">
+            <img src="../static/assets/img/logo.png" alt="" style="width: 170px;">
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+    <!-- /Логтип -->
+    <!-- Профиль -->
+    <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+            {% if current_user.is_authenticated %}
+                <li class="nav-item dropdown pe-3">
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img src="../static/assets/img/service/images_profiles_users/{{ current_user.source_image }}"
+                             alt="Profile" class="rounded-circle" style="width: 36px; height: 36px;">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">{{ current_user.name }}</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="/profile">
+                                <i class="bi bi-person"></i>
+                                <span>Профиль</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="/logout">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Выход</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            {% else %}
+                <li>
+                    <a class="btn btn-primary " href="/register">Зарегистрироваться</a>
+                    <a class="btn btn-success" href="/login">Войти</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+    <!-- /Профиль -->
+</header>
